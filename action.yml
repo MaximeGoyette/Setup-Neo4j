@@ -8,10 +8,18 @@ inputs:
     description: 'Version of Neo4j to use'
     required: false
     default: 'latest'
+  username:
+    description: 'The database user name'
+    required: false
+    default: 'neo4j'
   password:
-    description: 'The new password for the neo4j user'
+    description: 'The password for the database user'
     required: false
     default: 'ci'
+  initializerPath:
+    description: 'The initializer cypher script path'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
